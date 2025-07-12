@@ -27,3 +27,5 @@ def weathermap():
     except Exception as e:
         print(f"erro: {e}")
 
+if __name__ == '__main__':
+    app.run(debug=True)
