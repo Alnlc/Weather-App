@@ -120,8 +120,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 25%;
-    box-shadow: 0 0 60px rgba(106, 76, 147, 1);
+    border-radius: 50%;
+    /* box-shadow: 0 0 60px rgba(106, 76, 147, 1) */
+    box-shadow: 0 0 90px goldenrod;
     box-sizing: border-box;
 
 }
@@ -130,9 +131,10 @@ body {
     max-width: 100%;
     width: 700px;
     height: 800px;
+    position: relative;
     border-radius: 10%;
     background: #b830b1;
-    background: radial-gradient(circle, rgba(184, 48, 177, 1) 0%, rgba(1, 191, 255, 1) 100%);
+    background: radial-gradient(circle, rgba(184, 48, 177, 1) 0%, rgba(0, 191, 255, 1) 90%);
 
 
 
