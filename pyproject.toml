@@ -1,14 +1,16 @@
 [project]
-name = "app"
+name = "Weather-App"
 version = "0.1.0"
-description = ""
+description = "An weather web aplication, created by students using geolocation api native in browser and OpenWeather api. This idea emerged because of a challenge in Cafe Bugado comunity"
 authors = [
-    {name = "dougpng",email = "nldj265@gmail.com"}
+    {name = "dougpng",email = "nldj265@gmail.com"}, 
+    {name = "alnlc", email = "alanluciodasilvaals@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "flask (>=3.1.1,<4.0.0)",
+    "requests (>=2.32.4,<3.0.0)",
     "python-dotenv (>=1.1.1,<2.0.0)"
 ]
 
