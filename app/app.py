@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+from dotenv import load_dotenv
 import requests
 import os
 
@@ -9,10 +10,10 @@ app = Flask(__name__)
 
 @app.route('/home')
 
-def index():
+def home():
     return render_template('home.html', title='Home')
 
-@app.route('/weatherapp')
+@app.route('/weathermap')
 def weathermap():
 
     
@@ -23,7 +24,7 @@ def weathermap():
     if not lat and not lon:
         return ("error", 400)
 
-    api_url = f"https://api.openweathermap.org/data/3.0/onecall/timemachine?lat={lat}&lon={lon}&dt={dt}&appid={api_key}"
+    
     
     try:
         response = requests.get(api_url)
