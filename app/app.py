@@ -9,21 +9,19 @@ API_KEY = getenv('KEY_API')
 API_URL = "https://api.weatherbit.io/v2.0"
 
 app = Flask(__name__)
-
-@app.route('/home')
-
-#def home():
-#    return render_template('home.html', title='Home')
+if __name__ == '__main__':
+    app.run(debug=True)
 
 @app.route('/weathermap', methods = ['POST', 'GET'])
 def weathermap():
 
-    lat = request.args.get('lat')
-    lon = request.args.get('lon')
+    try:
+        lat = request.args.get('lat')
+        lon = request.args.get('lon')
 
-    if not lat and not lon:
-        return ("error", 400)
-
+    except Exception as e:
+        print(f'error: {e}')
+        
     def currentWeather():
         endpoint =  "/current"
         params = {
@@ -34,7 +32,7 @@ def weathermap():
             "key" : API_KEY
         }
         fullUrl = f"{API_URL}{endpoint}"
-
+        
         try:
             response = requests.get(fullUrl, params = params)
             response.raise_for_status()
@@ -90,5 +88,3 @@ def weathermap():
     
     return render_template('weather.html', title='Weather')
 
-if __name__ == '__main__':
-    app.run(debug=True)

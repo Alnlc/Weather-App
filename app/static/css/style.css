@@ -135,7 +135,16 @@ body {
     border-radius: 10%;
     background: #b830b1;
     background: radial-gradient(circle, rgba(184, 48, 177, 1) 0%, rgba(0, 191, 255, 1) 90%);
+}
 
+.footer{
+    display: flex;
+    background-color: #000000;
 
+}
+.creators{
+
+}
+.links{
 
 }
