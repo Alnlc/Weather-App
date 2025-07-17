@@ -1,50 +1,56 @@
-const displayDiv = getElementByClass(display);
+// CORREÇÃO: Usando querySelector para pegar a div pela sua classe.
+const displayDiv = document.querySelector('.display');
 
 function fetchGetAndUpdateWeatherApp(url) {
-    fetch
-    .then(Response => {
-        if (!response.ok){
-            throw new Error ('Erro $(response.status): Dados não obtidos');
-            return response,json() 
+    fetch(url)
+    // CORREÇÃO: Parâmetro 'response' em minúsculo e lógica de retorno corrigida.
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Erro de rede: ${response.status}`);
         }
+        return response.json(); // O return deve vir aqui.
     })
-    .then(data =>{
-        if(!data.error) {
+    .then(data => {
+        // CORREÇÃO: Lógica de erro invertida.
+        if (data.error) { 
             throw new Error(data.error); 
         }
-        const city = data.nome;
-        const temperature= data.main.temp;
-        const weather=data.weather[0].description;
 
-        displayDiv.innerHTML =
-            <><p><strong>Cidade:</strong>$(city)</p>
-            <p>Temperatura:$(temperature)</p>
-            <p>clima:$(weather)</p></>
-            
+        // Extraindo os dados do objeto 'current'
+        const city = data.current.city;
+        const temperature = data.current.currentTemp;
+        const weather = data.current.description;
+        
+        // CORREÇÃO: Usando crases (`) para criar um template literal HTML e sintaxe ${} para variáveis.
+        displayDiv.innerHTML = `
+            <p><strong>Cidade:</strong> ${city}</p>
+            <p><strong>Temperatura:</strong> ${temperature}°C</p>
+            <p><strong>Clima:</strong> ${weather}</p>
+        `;
     })
-    .catch(error =>){
-        displayDiv,textContent = "Error $(error.message)";
-
-    }
+    .catch(error => {
+        // Exibindo o erro na mesma div
+        displayDiv.textContent = `Erro: ${error.message}`;
+        console.error("Falha na obtenção dos dados do clima:", error);
+    });
 }
 
-
-if ('geolocation' in navigator){
+if ('geolocation' in navigator) {
     navigator.geolocation.getCurrentPosition(
         (position) => {
             const lat = position.coords.latitude;
             const lon = position.coords.longitude;
-            const url = '/app/weathermap?lat=${lat}&lon=${lon}'
+            // CORREÇÃO: Usando crases (`) para a string da URL e rota da API atualizada
+            const url = `/api/weather?lat=${lat}&lon=${lon}`;
             fetchGetAndUpdateWeatherApp(url);
-
         },
-        (error) =>{
+        (error) => {
             console.warn(`Erro de Geolocalização (código ${error.code}): ${error.message}`);
-            infoClimaDiv.textContent = 'Geolocalização negada. Por favor, use a busca manual.';
+            // CORREÇÃO: Usando a div que já temos para exibir o erro
+            displayDiv.textContent = 'Geolocalização negada. Não é possível obter o clima.';
         }
-    )
-}else {
-            // Caso o navegador seja muito antigo e não suporte a API
-            infoClimaDiv.textContent = 'Seu navegador não suporta geolocalização. Use a busca manual.';
-        }
-
+    );
+} else {
+    // Caso o navegador seja muito antigo e não suporte a API
+    displayDiv.textContent = 'Seu navegador não suporta geolocalização.';
+}

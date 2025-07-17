@@ -138,7 +138,10 @@ body {
 }
 
 .footer{
+    color: white;
     display: flex;
+    position: fixed;
+    bottom: 0px;
     background-color: #000000;
 
 }

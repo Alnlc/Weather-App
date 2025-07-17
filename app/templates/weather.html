@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet" href="/static/css/style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
@@ -20,9 +22,13 @@
 
     <div class="main-container">
         <div class="container-weather"></div>
-    </div>
-    <div class="display-weather">
-        <div class="display"></div>
+
+        <div class="display-weather">
+            <div class="display">
+                <p>Obtendo dados do clima...</p>
+            </div>
+        </div>
+
     </div>
     <footer class="footer">
         <h3 class="creators">created by Alan Lucio
@@ -34,16 +40,16 @@
               </a>
                 <i></i>
             </a>
-            e Douglas J.           
+            e Douglas J.
             <a class="links" href="https://www.linkedin.com/in/douglas-j-leal/" target="_blank">
                 <i class="fab fa-linkedin"></i>
             </a>
             <a href="https://github.com/dougpng" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
-        </h3>  
+        </h3>
     </footer>
-    <script src="{{url for('static', filename='js/app.js')}}"></script>
+    <script src="/static/js/app.js"></script>
 </body>
 
 </html>
