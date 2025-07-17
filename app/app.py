@@ -28,20 +28,19 @@ def weathermap():
         try:
             response = requests.get(fullUrl, params=params)
             response.raise_for_status()
-            dataResponse = response.json()
-            print(dataResponse)
-            currentWeatherData = {
-                'city': dataResponse['city_name'],
-                'country': dataResponse['country_code'],
-                'currentTemp': dataResponse['data'][0]['temp'],
-                'time': dataResponse['data'][0]['ob_time'],
-                'wind': dataResponse['data'][0]['wind_spd'],
-                'rh': dataResponse['data'][0]['rh'],
-                'pod': dataResponse['data'][0]['pod'],
-                'description': dataResponse['data'][0]['weather']['description'],
-                'icon': dataResponse['data'][0]['weather']['icon']
-            }
+            data = response.json()['data'][0]
 
+            currentWeatherData = {
+                'city': data['city_name'],
+                'country': data['country_code'],
+                'currentTemp': data['temp'],
+                'time': data['ob_time'],
+                'wind': data['wind_spd'],
+                'rh': data['rh'],
+                'pod': data['pod'],
+                'description': data['weather']['description'],
+                'icon': data['weather']['icon']
+            }
             return currentWeatherData
         except Exception as e:
             print(f"Current weather request erro: {e}")
@@ -88,7 +87,7 @@ def weathermap():
     
     responseData = {
         'current' : currentWeather(lat, lon),
-        'forecast' : forecastWeather(lat, lon),
+        'forecast' : forecastWeather(lat, lon)
     }
 
 
