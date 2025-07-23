@@ -3,6 +3,8 @@ instance/*
 !instance/.gitignore
 .webassets-cache
 __pycache__
+__init__.py
+
 
 # Environments
 .venv
@@ -11,3 +13,4 @@ __pycache__
 ### Python Patch ###
 # Poetry local configuration file - https://python-poetry.org/docs/configuration/#local-configuration
 poetry.toml
+

@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request, jsonify
 from dotenv import load_dotenv
-import requests
 from os import getenv
+import requests
+import datetime
+
+
 
 load_dotenv()
 
@@ -11,7 +14,12 @@ API_URL = "https://api.weatherbit.io/v2.0"
 app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('weather.html', title='Weather')
+    now = datetime.datetime.now()
+    print(now)
+    if 6 <= now.hour <18 :
+        return render_template('weather-day.html', title='Weather')
+    else:
+        return render_template('weather-nigth.html', title='Weather')
 @app.route('/weathermap', methods = ['GET'])
 def weathermap():
     def currentWeather(lat, lon):

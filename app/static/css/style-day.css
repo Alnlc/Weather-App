@@ -343,8 +343,7 @@ body {
 
     .display-forecast {
         flex-direction: column;
-        align-items: center;
-    }
+        align-items: center;    }
 
     .forecast-day {
         max-width: 90%;
