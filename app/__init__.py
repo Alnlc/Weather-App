@@ -23,7 +23,7 @@ def currentWeather(lat, lon):
         response = requests.get(fullUrl, params=params)
         response.raise_for_status()
         data = response.json()['data'][0]
-        print (data)
+
         currentWeatherData = {
             'city': data['city_name'],
             'country': data['country_code'],
@@ -74,9 +74,6 @@ def forecastWeather(lat, lon):
     except Exception as e:
         print(f"Forecast request erro: {e}")
 
-# Rio de Janeiro, Latitude: -22.9035, Longitude: -43.2096
-
-
-
-print(forecastWeather(-22.9035,-43.2096))
+#Rio de Janeiro Latitude: -22.9035, Longitude: -43.2096
 print(currentWeather(-22.9035,-43.2096))
+print(forecastWeather(-22.9035,-43.2096))

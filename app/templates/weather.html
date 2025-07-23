@@ -6,49 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
 
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/style-nigth.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
 </head>
 
 <body>
-    <div id="clouds">
-        <div class="cloud c1"></div>
-        <div class="cloud c2"></div>
-        <div class="cloud c3"></div>
-        <div class="cloud c4"></div>
-        <div class="cloud c5"></div>
-    </div>
-
-    <div class="main-container">
-        <div class="container-weather"></div>
+    <div class="page-wrapper">
+        <div class="background-container">
+            <div class="clouds" id="c1"></div>
+            <div class="clouds" id="c2"></div>
+            <div class="elment-sun-moon"></div>
+        </div>
 
         <div class="display-weather">
             <div class="display">
-                <p>Obtendo dados do clima...</p>
+                <div class="loading-message">
+                    <p id="obt">Obtendo dados do clima...</p>
+                </div>
+
+                <div class="display-current"></div>
+
+                <div class="display-forecast"></div>
+
             </div>
         </div>
-
     </div>
-    <footer class="footer">
-        <h3 class="creators">created by Alan Lucio
-            <a class="links" href="https://www.linkedin.com/in/alan-lucio-aln/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/Alnlc" target="_blank">
-                <i class="fab fa-github"></i>
-              </a>
-                <i></i>
-            </a>
-            e Douglas J.
-            <a class="links" href="https://www.linkedin.com/in/douglas-j-leal/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/dougpng" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-        </h3>
-    </footer>
+    <div class="description-container">
+        <div class="description">
+            <p class="bug-icon">
+                <i class="fa-solid fa-bug"></i>
+            </p>
+
+            <div class="creators">
+                <p>Created by</p>
+
+                <p><strong>Alan L.</strong><br>
+                    <a class="links" href="https://www.linkedin.com/in/alan-lucio-aln/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a class="links" href="https://github.com/Alnlc" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </p>
+
+                <p>&</p>
+
+                <p><strong>Douglas J.</strong><br>
+                    <a class="links" href="https://www.linkedin.com/in/douglas-j-leal/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a class="links" href="https://github.com/dougpng" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
     <script src="/static/js/app.js"></script>
 </body>
 
