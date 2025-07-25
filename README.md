@@ -28,8 +28,13 @@ Uma aplicação web, construída com o micro-framework Python Flask, que exibe a
 
 ## **🖼️ Preview**
 
-![][image1]  
-![][image2]
+<div align="center">
+ <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/6ff58b8b-fe23-43c0-b2d2-151a9b1a96ff" />
+</div>
+
+<div align="center">
+<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/98cf3219-1701-44cf-9bf7-20b1564701c4" />
+</div>
 
 ## **🛠️ Tecnologias Utilizadas**
 
