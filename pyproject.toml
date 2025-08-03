@@ -1,7 +1,8 @@
-[project.weather]
-name = "Weather-App"
+[project]
+name = "app"
 version = "0.1.0"
 description = "An weather web aplication, created by students using geolocation api native in browser and OpenWeather api. This idea emerged because of a challenge in Cafe Bugado comunity"
+package-mode = false
 authors = [
     {name = "dougpng",email = "nldj265@gmail.com"}, 
     {name = "alnlc", email = "alanluciodasilvaals@gmail.com"}
@@ -13,8 +14,6 @@ dependencies = [
     "requests (>=2.32.4,<3.0.0)",
     "python-dotenv (>=1.1.1,<2.0.0)"
 ]
-
-
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
