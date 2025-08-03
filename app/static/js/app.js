@@ -2,7 +2,7 @@ const displayDiv = document.querySelector('.display');
 const displayDivCurr = document.querySelector('.display-current');
 const displayDivFore = document.querySelector('.display-forecast');
 const loadingMessage = document.querySelector('.loading-message');
-const bugIcon = document.querySelector('.bug-icon')
+
 
 
 function fetchGetAndUpdateWeatherApp(url) {
@@ -140,3 +140,12 @@ function initializeWeatherApp() {
 
 // Inicializar o app quando a página carregar
 document.addEventListener('DOMContentLoaded', initializeWeatherApp);
+document.addEventListener('DOMContentLoaded', () => {
+            const descriptionContainer = document.querySelector('.description-container');
+
+            if (descriptionContainer) {
+                descriptionContainer.addEventListener('click', () => {
+                    descriptionContainer.classList.toggle('active');
+                });
+            }
+        });
