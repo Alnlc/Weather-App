@@ -17,7 +17,7 @@ def index():
     if 6 <= now.hour <18 :
         return render_template('weather-day.html', title='Weather')
     else:
-        return render_template('weather-nigth.html', title='Weather')
+        return render_template('weather-night.html', title='Weather')
     
 @app.route('/weathermap', methods = ['GET'])
 def weathermap():

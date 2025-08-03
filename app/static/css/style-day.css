@@ -50,9 +50,9 @@ body {
 }
 
 
-.elment-sun-moon {
+.element-sun-moon {
     background-repeat: no-repeat;
-    background-image: url('../images/sun.png');
+    background-image: url('../images/elements/sun.png');
     background-size: contain;
     background-position: center;
     display: flex;
@@ -433,7 +433,7 @@ body {
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .elment-sun-moon {
+    .element-sun-moon {
         top: 2%;
         right: 2%;
         width: clamp(80px, 15vw, 200px);
@@ -488,7 +488,7 @@ body {
     }
 
 
-    .elment-sun-moon {
+    .element-sun-moon {
         width: clamp(60px, 12vw, 150px);
         height: clamp(60px, 12vw, 150px);
     }

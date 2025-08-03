@@ -47,13 +47,13 @@ body {
     right: 0;
     bottom: 0;
     pointer-events: none;
-    background-image: url("../images/stars.png");
+    background-image: url("../images/elements/stars.png");
     z-index: 1;
 }
 
-.elment-sun-moon {
+.element-sun-moon {
     background-repeat: no-repeat;
-    background-image: url('../images/moon.png');
+    background-image: url('../images/elements/moon.png');
     background-size: contain;
     background-position: center;
     display: flex;
@@ -417,7 +417,7 @@ body {
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .elment-sun-moon {
+    .element-sun-moon {
         top: 2%;
         right: 2%;
         width: clamp(80px, 15vw, 200px);
@@ -466,7 +466,7 @@ body {
         padding: 25px;
     }
 
-    .elment-sun-moon {
+    .element-sun-moon {
         width: clamp(60px, 12vw, 150px);
         height: clamp(60px, 12vw, 150px);
     }
