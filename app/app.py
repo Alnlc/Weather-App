@@ -97,9 +97,10 @@ def weathermap():
     lon = request.args.get('lon')
 
     if not lat or not lon:
-        return jsonify({'error': 'Os parametros "lat" e "lon" não foram cumpridos'}), 400
+        
         lat = mockdata.mockCoordinateLat()
         lon = mockdata.mockCoordinatesLon()
+        return jsonify({'error': 'Os parametros "lat" e "lon" não foram cumpridos, exibindo informações ficticias.'}), 400
     
     responseData = {
         'current' : currentWeather(lat, lon),
