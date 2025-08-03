@@ -64,6 +64,7 @@ body {
     right: 5%;
     width: clamp(100px, 20vw, 300px);
     height: clamp(100px, 20vw, 300px);
+    zoom: 1.05;
     z-index: 4;
 }
 
@@ -86,7 +87,6 @@ body {
     left: -50vw;
 }
 
-/* Cloud Styles with Animation - Sincronização perfeita */
 .c1 {
     background-image: url("../images/nuvens-noturnas/nuvem-1.png");
     width: 40vw;
@@ -302,7 +302,6 @@ body {
     width: 40px;
     height: 70px;
     z-index: 15;
-    /* Added for smooth transition on child elements */
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -327,12 +326,12 @@ body {
     font-family: 'Winky Rough', Tahoma, Geneva, Verdana, sans-serif;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer; /* Indicates it's clickable */
+    cursor: pointer;
     position: relative;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* NEW: This class will be toggled by JavaScript on click */
+
 .description-container.active {
     top: 50px;
     width: 320px;
@@ -406,7 +405,6 @@ body {
     color: #0077B5;
 }
 
-/* NEW: Styles when the .active class is present */
 .description-container.active .bug-icon {
     opacity: 0;
 }

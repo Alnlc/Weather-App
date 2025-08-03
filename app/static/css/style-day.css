@@ -20,11 +20,11 @@ body {
     width: 100vw;
     overflow: hidden;
     margin: 0;
-    padding: clamp(10px, 3vw, 20px); /* Ajustado para consistência */
+    padding: clamp(10px, 3vw, 20px);
     box-sizing: border-box;
-    display: flex; /* Adicionado para centralizar */
-    justify-content: center; /* Adicionado para centralizar */
-    align-items: center; /* Adicionado para centralizar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .page-wrapper {
@@ -40,35 +40,31 @@ body {
 }
 
 .background-container {
-    position: fixed; /* Ajustado para fixed como no night.css */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     pointer-events: none;
-    z-index: 1; /* Abaixo dos elementos principais */
+    z-index: 1;
 }
 
 
 .elment-sun-moon {
-    background: radial-gradient(circle, #FFFBD9 0%, #FFD700 40%, #FFA500 80%);
+    background-repeat: no-repeat;
+    background-image: url('../images/sun.png');
     background-size: contain;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 5%;
+    top: 2%;
     right: 5%;
     width: clamp(100px, 20vw, 300px);
     height: clamp(100px, 20vw, 300px);
-    border-radius: 50%;
-    box-shadow:
-        0 0 30px 10px rgba(255, 255, 255, 0.8),
-        0 0 80px 40px rgba(255, 223, 0, 0.7),
-        0 0 150px 100px rgba(238, 226, 66, 0.5);
-    z-index: 4; /* Z-index ajustado */
-    animation: sunGlow 8s ease-in-out infinite alternate;
+    zoom: 1.5;
+    z-index: 4;
 }
 
 @keyframes sunGlow {
@@ -105,7 +101,6 @@ body {
     left: -50vw;
 }
 
-/* Nuvens Diurnas (sem alteração de imagem) */
 .c1 {
     background-image: url("../images/nuvens-diurnas/nuvem-1.png");
     width: 40vw;
@@ -174,10 +169,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* Alterado de absolute para relative */
-    margin: auto; /* Adicionado para auxiliar na centralização */
+    position: relative;
+    margin: auto;
     width: 100%;
-    max-width: min(900px, 95vw); /* Ajustado para consistência */
+    max-width: min(900px, 95vw);
     min-height: clamp(400px, 60vh, 600px);
     z-index: 10;
 }
@@ -235,7 +230,7 @@ body {
     font-style: normal;
     box-sizing: border-box;
     background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 0 10px 15px rgba(128, 128, 128, 0.3); /* Mantido para efeito visual */
+    box-shadow: 0 0 10px 15px rgba(128, 128, 128, 0.3);
     backdrop-filter: blur(5px);
     padding: clamp(10px, 3vw, 20px);
     border-radius: 15px;
@@ -386,7 +381,7 @@ body {
 
 .creators {
     opacity: 0;
-    transition: opacity 0.1255s ease-in-out; /* Ajustado para consistência */
+    transition: opacity 0.1255s ease-in-out;
     font-family: "Courier Prime", monospace;
     font-size: clamp(27px, 7vw, 40px);
     font-weight: bold;
@@ -426,7 +421,7 @@ body {
 
 .fa-slab {
     font-size: clamp(20px, 5vw, 32px);
-    color: #333; /* Cor mantida para o tema dia */
+    color: #333;
     text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
 }
 .fa-github {
@@ -460,7 +455,7 @@ body {
         border-radius: 15px;
     }
 
-    .description-container.active { /* Regra movida para cima para agrupamento lógico */
+    .description-container.active {
         width: 280px;
         height: 350px;
     }
@@ -468,7 +463,6 @@ body {
          padding: 30px;
     }
 
-    /* .description:hover removido para favorecer a classe .active */
 
     .clouds {
         animation-duration: 40s !important;
@@ -485,7 +479,7 @@ body {
         padding: clamp(10px, 3vw, 15px);
     }
 
-    .description-container.active { /* Regra movida para cima para agrupamento lógico */
+    .description-container.active {
         width: 250px;
         height: 300px;
     }
@@ -493,7 +487,6 @@ body {
          padding: 25px;
     }
 
-    /* .description:hover removido para favorecer a classe .active */
 
     .elment-sun-moon {
         width: clamp(60px, 12vw, 150px);
