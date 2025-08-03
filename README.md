@@ -29,23 +29,24 @@ Uma aplicação web, construída com o micro-framework Python Flask, que exibe a
 ## **🖼️ Preview**
 
 <div align="center">
- <img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/6ff58b8b-fe23-43c0-b2d2-151a9b1a96ff" />
+ <img width="1920" height="1080" alt="Image" src="/app/static/images/previews/day.png" />
 </div>
 
 <div align="center">
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/98cf3219-1701-44cf-9bf7-20b1564701c4" />
+<img width="1920" height="1080" alt="Image" src="/app/static/images/previews/night.png" />
 </div>
 
 ## **🛠️ Tecnologias Utilizadas**
 
 * **Backend:**  
   * [Python](https://www.python.org/)  
-  * [Flask](https://flask.palletsprojects.com/)  
+  * [Flask](https://flask.palletsprojects.com/)
+  * [Poetry](https://python-poetry.org)  
 * **Frontend:**  
   * HTML5, CSS3, JavaScript  
   * **API de Geolocalização do Navegador** para obter as coordenadas do usuário.  
 * **API Externa:**  
-  * [**Weatherbit API**](https://www.weatherbit.io/) para fornecimento dos dados climáticos.
+  * [**Weatherbit.io API**](https://www.weatherbit.io/) para fornecimento dos dados climáticos.
 
 ## **🚀 Como Instalar e Executar**
 
@@ -54,32 +55,32 @@ Siga os passos abaixo para configurar e executar o projeto em seu ambiente local
 ### **Pré-requisitos**
 
 * [Python 3.10+](https://www.python.org/downloads/)  
-* pip (gerenciador de pacotes do Python)  
+* poetry, pip ou qualquer gerenciador de pacotes do Python com compatibilidade com arquivos .toml 
 * git (para clonar o repositório)
 
 ### **Instalação**
 
 1. **Clone o repositório:**  
    Bash  
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/Alnlc/Weather-App
 
 2. **Navegue até o diretório do projeto:**  
    Bash  
-   cd seu-repositorio
+   cd /Weather-App
 
 3. **Crie e ative um ambiente virtual (recomendado):**  
    Bash  
    \# Para Linux/macOS  
-   python3 \-m venv venv  
+   python3 \-m venv .venv  
    source venv/bin/activate
 
    \# Para Windows  
-   python \-m venv venv  
-   .\\venv\\Scripts\\activate
+   python \-m venv .venv  
+   .\\.venv\\Scripts\\activate
 
 4. **Instale as dependências do projeto:**  
-   Bash  
-   pip install \-r requirements.txt
+   Bash
+   poetry install ou pip install \-r pyproject.toml 
 
 ### **Configuração**
 
@@ -88,10 +89,9 @@ Para que a aplicação funcione, você precisa de uma chave de API do serviço d
 1. **Crie um arquivo .env na raiz do projeto.**  
    touch .env
 
-2. **Adicione sua chave de API ao arquivo .env:**  
-   Ini, TOML  
+2. **Adicione sua chave de API ao arquivo .env:**    
    \# Chave da API obtida no site da Weatherbit  
-   API\_KEY='SUA\_CHAVE\_DE\_API\_SECRETA\_AQUI'  
+   KEY\_API="SUA\_CHAVE\_DE\_API\_SECRETA\_AQUI"  
    **Nota:** Você pode obter uma chave de API, incluindo um plano gratuito, no site da [Weatherbit](https://www.weatherbit.io/pricing).
 
 ### **Executando a Aplicação**
@@ -108,7 +108,9 @@ Abra seu navegador e acesse http://127.0.0.1:5000 para ver a aplicação em func
 
 Este projeto está em constante evolução. Os próximos passos planejados são:
 
-* ✅ **Templates Adaptáveis ao Clima:** O plano principal é expandir a funcionalidade dos temas dinâmicos. A interface mudará não apenas entre dia e noite, mas também para **refletir o clima atual (ensolarado, nublado, chuvoso, tempestade, etc.)**, oferecendo uma experiência visual mais rica e imersiva.  
+* \[ \] **Templates Adaptáveis ao Clima:** O plano principal é expandir a funcionalidade dos temas dinâmicos. A interface mudará não apenas entre dia e noite, mas também para **refletir o clima atual (ensolarado, nublado, chuvoso, tempestade, etc.)**, oferecendo uma experiência visual mais rica e imersiva.
+* \[ \] **Dados mockados:** A adição de dados ficticios para que o usuario possa visualizar a interface de maneira completa caso ocorra algum erro com a API externa.
+* \[ \] **Pop ups de erro:** Trocar as mensagens de erro atuais por pop-ups, a intenção é que mesmo ao resultar em erro o usuario possa desfrutar de uma aparencia de tela mais agradavel.
 * \[ \] **Unidades de Medida Alternativas:** Adicionar um botão para alternar a exibição de temperatura entre Celsius (°C) e Fahrenheit (°F).  
 * \[ \] **Detalhes Adicionais:** Incluir mais dados como índice UV e probabilidade de precipitação.
 

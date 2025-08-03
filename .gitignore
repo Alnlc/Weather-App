@@ -2,9 +2,7 @@
 instance/*
 !instance/.gitignore
 .webassets-cache
-__pycache__
-__init__.py
-
+app/__pycache__
 
 # Environments
 .venv
