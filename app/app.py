@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 from os import getenv
 import requests
 import datetime
-import mockdata
+from mockdata import mockdata
 
 load_dotenv()
 
