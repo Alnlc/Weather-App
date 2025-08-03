@@ -1,4 +1,3 @@
-[project]
 name = "Weather-App"
 version = "0.1.0"
 description = "An weather web aplication, created by students using geolocation api native in browser and OpenWeather api. This idea emerged because of a challenge in Cafe Bugado comunity"
