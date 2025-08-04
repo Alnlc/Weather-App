@@ -3,7 +3,7 @@ instance/*
 !instance/.gitignore
 .webassets-cache
 app/__pycache__
-app/mockdata/__pycache__
+mockdata/__pycache__
 
 
 # Environments

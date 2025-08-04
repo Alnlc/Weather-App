@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1c30562-78b5-487d-a372-d5e17765541d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/mockdata/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mockdata/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mockdata/mockdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/mockdata/mockdata.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="CSS File" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -144,7 +149,7 @@
       <workItem from="1753200293795" duration="8757000" />
       <workItem from="1753237703310" duration="7604000" />
       <workItem from="1753246245705" duration="14694000" />
-      <workItem from="1754261995807" duration="2325000" />
+      <workItem from="1754261995807" duration="3569000" />
     </task>
     <servers />
   </component>

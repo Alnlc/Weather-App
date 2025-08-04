@@ -5,6 +5,7 @@ import requests
 import datetime
 from mockdata import mockdata
 
+
 load_dotenv()
 
 API_KEY = getenv('KEY_API')
