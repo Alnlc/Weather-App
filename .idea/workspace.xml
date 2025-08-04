@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1c30562-78b5-487d-a372-d5e17765541d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/css/style-day.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/style-day.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/clouds.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/dark-village.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/day-clouds2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/day-clouds2.xcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/twinkling.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/village-night.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/village.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/weather.html" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +65,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="RunManager" selected="Flask server.Weather-App">
     <configuration name="Weather-App" type="PythonConfigurationType" factoryName="Python">
       <module name="Weather-App" />
@@ -150,6 +145,7 @@
       <workItem from="1753200293795" duration="8757000" />
       <workItem from="1753237703310" duration="7604000" />
       <workItem from="1753246245705" duration="14694000" />
+      <workItem from="1754261995807" duration="1320000" />
     </task>
     <servers />
   </component>
