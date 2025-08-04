@@ -9,6 +9,7 @@ mockdata/__pycache__
 # Environments
 .venv
 .env
+.idea
 
 ### Python Patch ###
 # Poetry local configuration file - https://python-poetry.org/docs/configuration/#local-configuration
