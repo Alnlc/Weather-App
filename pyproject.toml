@@ -5,7 +5,7 @@ description = "An weather web aplication, created by students using geolocation 
 package-mode = false
 authors = [
     {name = "dougpng",email = "nldj265@gmail.com"}, 
-    {name = "alnlc", email = "alanluciodasilvaals@gmail.com"}
+    {name = "alnlc", email = "dev-a@tuta.io"}
 ]
 readme = "README.md"
 requires-python = ">=3.12"
